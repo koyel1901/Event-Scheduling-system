@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventFlow - Smart Event Management</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="hero-image-container">
+        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3" alt="Event Planning" class="hero-image">
+      </div>
+      <h1>EventFlow</h1>
+      <p>Intelligent Event Management Platform</p>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-brand">EventFlow</div>
+    <div class="nav-links">
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Events</a>
+      <a href="#">Venues</a>
+      <a href="#">Reports</a>
+    </div>
+    <div class="nav-actions">
+      <button class="notification-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+      </button>
+      <button class="profile-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="schedule-section">
+      <div class="schedule-form">
+        <h2>Schedule New Event</h2>
+        <form id="eventForm">
+          <label for="title">Event Title:</label>
+          <input type="text" id="title" name="title" required placeholder="Enter event title" />
+
+          <label for="venue">Select Venue:</label>
+          <select id="venue" name="venue" required>
+            <option value="">Select a venue</option>
+            <option value="Auditorium">Auditorium</option>
+            <option value="Conference Hall">Conference Hall</option>
+            <option value="Seminar Room">Seminar Room</option>
+          </select>
+
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="startTime">Start Time:</label>
+          <input type="time" id="startTime" name="startTime" required />
+
+          <label for="endTime">End Time:</label>
+          <input type="time" id="endTime" name="endTime" required />
+
+          <button type="submit">Schedule Event</button>
+        </form>
+        <p id="message"></p>
+      </div>
+      <div class="calendar-view">
+        <h2>Scheduled Events</h2>
+        <div id="scheduleList"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
