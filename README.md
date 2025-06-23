@@ -41,6 +41,8 @@ The Event Scheduling System is developed using a **modular and layered architect
 - Modular Java backend with RESTful API
 - Ready for future scalability to multiple venues##
   
+---
+  
 ## 🧱 Challenges & Roadblocks
 
 - **Scalability**: Current design supports only three venues. Scaling requires a priority queue or heap-based scheduling.
